@@ -23,7 +23,8 @@ module OmniAuth
         begin
           response = OmniAuth::Strategies::SAML_RSTR::AuthResponse.new(request.params['wresult'])
           response.settings = options
-          
+
+          puts "*************** #{response}"
           @name_id  = response.agencyUID
 
           puts "**************************agencyUID/name_id has been set to #{@name_id}"
