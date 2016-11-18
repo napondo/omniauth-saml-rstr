@@ -30,7 +30,7 @@ module OmniAuth
           puts "**************************agencyUID/name_id has been set to #{@name_id}"
           @attributes = response.attributes
 
-          return fail!(:invalid_ticket, OmniAuth::Error.new('Invalid SAML_RSTR Ticket')) if @name_id.nil? || @name_id.empty? #|| !response.valid?
+          return fail!(:invalid_ticket, OmniAuth::Error.new('Invalid SAML_RSTR Ticket')) if !response.valid?
           super
         rescue ArgumentError => e   
           fail!(:invalid_ticket, OmniAuth::Error.new('Invalid SAML_RSTR Response'))
