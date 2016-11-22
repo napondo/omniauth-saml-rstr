@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = "josh@highgroove.com"
   gem.homepage      = "https://github.com/mutexkid/omniauth-saml-rstr"
 
-  gem.add_runtime_dependency 'omniauth', '~> 1.0'
+  gem.add_runtime_dependency 'omniauth', '~> 1.3'
   gem.add_runtime_dependency 'xmlcanonicalizer', '0.1.1'
   gem.add_runtime_dependency 'uuid', '~> 2.3'
 
